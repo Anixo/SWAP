@@ -23,7 +23,7 @@ $ nano /etc/network/interfaces
 Y editamos el archivo de una máquina de la siguiente forma:  
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P1/img/6_red10.png)  
 Hacemos lo mismo para la segunda máquina:  
-![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P1/img/7_red20.png)
+![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P1/img/7_red20.png)  
 Reiniciamos el servicio de red y las tarjetas de red para que surjan efecto los cambios:  
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P1/img/8_reinicio.png)  
 Por último, comprobamos que Apache se está ejecutnado con el comando de la imagen:  
