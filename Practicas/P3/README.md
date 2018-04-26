@@ -74,18 +74,18 @@ Y editar su archivo de configuración:
 ```
 $ sudo nano /etc/pound/pound.cfg
 ```
-En el escribimos lo siguiente:  
+En el cual escribimos lo siguiente:  
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P3/img/10_pound_conf.png)  
 
 Ahora ejecutamos el siguiente comando para que se pueda iniciar:  
 ```
 $ sed -i -e "s/^startup=0/startup=1/" /etc/default/pound
 ```
-Cambiamos el siguiente archivo para activar los logs de pound:  
+Abrimos el siguiente archivo para activar los logs de pound:  
 ```
 $ sudo nano /etc/rsyslog.d/50-default.conf
 ```
-Y editamos las líneas subbrayadas de rojo tal y como está en la imagen:  
+Y editamos las líneas subbrayadas de rojo dejándolas tal y como está en la imagen:  
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P3/img/11_pound_log.png)  
 
 Reiniciamos el servicio:
@@ -96,7 +96,8 @@ Y vemos que funciona correctamente como balanceador:
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P3/img/12_pound_peticiones.png)  
 
 ## Apache Benchmark
-Vamos a poner a una prueba de estrés a nuestros balanceadores para ver cuál de ellos tiene mejor prestaciones. Usaremos el programa Apache Benchmark con 100000 peticiones de 100 en 100. El parámetro *-g <archivo>.tsv* nos servirá para guardar estos valores.  
+Vamos a poner a una prueba de estrés a nuestros balanceadores para ver cuál de ellos tiene mejor prestaciones. Usaremos el programa Apache Benchmark con 100.000 peticiones de 100 en 100. El parámetro *-g archivo.tsv* nos servirá para guardar estos valores.  
+
 Empezamos con **nginx**. Ejecutamos:  
 ```
 $ ab -g nginx.tsv -n 100000 -c 100 http://10.0.0.30/hola.html
@@ -119,4 +120,4 @@ Obteniendo como resultado lo siguiente:
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P3/img/15_ab_pound.png)  
 
 Si observamos el campo *Time per request* vemos que haproxy es el que mejor resultado tiene, e incluso tiene una mayor tasa de transferencia. Con la siguiente gráfica, se vé más claro que haproxy es el que mejor prestaciones nos ha dado:  
-![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P3/img/16_grafica.png)
+![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P3/img/16_grafica.jpg)
