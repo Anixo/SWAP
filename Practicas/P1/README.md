@@ -13,7 +13,7 @@ También hemos llamado al usuario de la siguiente forma en cada máquina:
 Y durante el proceso de la instalación, hemos instalado los siguientes programas:  
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P1/img/5_programas.png)  
 
-El resto de pasos hay que seguir los pasos normales de instalacíon y las máquinas ya estarían listas.
+El resto de pasos hay que seguir los pasos normales de instalación y las máquinas ya estarían listas.
 
 ## Configuración de la red
 Procedemos a configurar la red de ambas máquinas. Para ello a ejecutamos el siguiente comando para editar de forma manual la configuración:
@@ -26,7 +26,7 @@ Hacemos lo mismo para la segunda máquina:
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P1/img/7_red20.png)  
 Reiniciamos el servicio de red y las tarjetas de red para que surjan efecto los cambios:  
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P1/img/8_reinicio.png)  
-Por último, comprobamos que Apache se está ejecutnado con el comando de la imagen:  
+Por último, comprobamos que Apache se está ejecutando con el comando de la imagen:  
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P1/img/9_apacherun.png)  
 
 ## Comando Curl
