@@ -114,3 +114,59 @@ Y si ahora insertamos una tupla en el maestro:
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P5/img/19_escribo_maestro.png)  
 Este aparece de forma automática en el esclavo:  
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P5/img/20_actualiza_esclavo.png)  
+
+
+# Parte opcional: Réplica maestro - maestro
+Para configurar dos máquinas que hagan de replica de forma maestro - maestro, los pasos son muy similares al maestro - esclavo. Vamos a describir los pasos.  
+## Configuración primera máquina maestra
+Editamos el archivo:  
+```
+$ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+```
+Y modificamos lo que aparece en la imagen, comentando también la línea correspondiete al **bind-address**:  
+![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P5/img/21_archivo_config.png)  
+Reiniciamos el servicio de MYSQL y listo:  
+```
+$ sudo /etc/init.d/mysql restart
+```
+Entramos a MYSQL y escribimos los comandos para el usuario de la réplica y para ver los detalles que tiene como maestro:  
+```
+> create user 'replicator'@'%' identified by 'password';
+> grant replication slave on *.* to 'replicator'@'%';
+> show master status;
+```
+![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P5/img/22_comandos_primer_maestro.png)  
+
+## Configuración segunda máquina maestra
+Editamos el archivo:  
+```
+$ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+```
+Y modificamos lo mismo que en el caso del primer maestro, salvo que hay que poner **server-id** con el valor 2 y reiniciamos el servicio de MYSQL.  
+
+Entramos a MYSQL y escribimos los comandos para dar permisos al usuario de la réplica y para ver los detalles que tiene como maestro:  
+```
+> grant replication slave on *.* to 'replicator'@'%';
+> show master status;
+```
+![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P5/img/23_estado_segundo_maestro.png)  
+Creamos la replica hacia el primer maestro con:  
+```
+> stop slave;
+> CHANGE MASTER TO MASTER_HOST = '10.0.0.10', MASTER_USER = 'replicator', MASTER_PASSWORD = 'password', MASTER_LOG_FILE = 'mysql-bin.000004', MASTER_LOG_POS = 607;
+> start slave;
+```
+
+## Configuración de la réplica en la primera máquina maestra
+Por último, ejecutamos los últimos comandos pero en el primer maestro con los parámetros adecuados del segundo maestro:  
+```
+> stop slave;
+> CHANGE MASTER TO MASTER_HOST = '10.0.0.20', MASTER_USER = 'replicator', MASTER_PASSWORD = 'password', MASTER_LOG_FILE = 'mysql-bin.000004', MASTER_LOG_POS = 639;
+> start slave;
+```
+
+## Demostración
+Si insertamos una tupla en el primer maestro, vemos que se actualiza en el segundo:  
+![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P5/img/24_maestro1_maestro2.png)  
+Y viceversa:  
+![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P5/img/25_maestro2_maestro1.png)
