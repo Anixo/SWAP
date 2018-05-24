@@ -117,13 +117,13 @@ Este aparece de forma automática en el esclavo:
 
 
 # Parte opcional: Réplica maestro - maestro
-Para configurar dos máquinas que hagan de replica de forma maestro - maestro, los pasos son muy similares al maestro - esclavo. Vamos a describir los pasos.  
+Para configurar dos máquinas que hagan de réplica de forma maestro - maestro, los pasos son muy similares al maestro - esclavo. Vamos a describir los pasos.  
 ## Configuración primera máquina maestra
 Editamos el archivo:  
 ```
 $ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
-Y modificamos lo que aparece en la imagen, comentando también la línea correspondiete al **bind-address**:  
+Y modificamos lo que aparece en la imagen, comentando también la línea correspondiente al **bind-address**:  
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P5/img/21_archivo_config.png)  
 Reiniciamos el servicio de MYSQL y listo:  
 ```
@@ -150,7 +150,7 @@ Entramos a MYSQL y escribimos los comandos para dar permisos al usuario de la r�
 > show master status;
 ```
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P5/img/23_estado_segundo_maestro.png)  
-Creamos la replica hacia el primer maestro con:  
+Creamos la réplica hacia el primer maestro con:  
 ```
 > stop slave;
 > CHANGE MASTER TO MASTER_HOST = '10.0.0.10', MASTER_USER = 'replicator', MASTER_PASSWORD = 'password', MASTER_LOG_FILE = 'mysql-bin.000004', MASTER_LOG_POS = 607;
