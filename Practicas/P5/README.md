@@ -110,7 +110,7 @@ Tras todo esto, la configuración maestro-esclavo estará lista. Para comprobarl
 ```
 El parámetro que se muestra en la imagen debe ser distinto de *null*, lo que significa que es correcto.  
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P6/img/18_comrobacion.png)  
-Y si ahora insertamos uan tupla en el maestro:  
+Y si ahora insertamos una tupla en el maestro:  
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P6/img/19_escribo_maestro.png)  
 Este aparece de forma automática en el esclavo:  
 ![imagen](https://github.com/Anixo/SWAP/blob/master/Practicas/P6/img/20_actualiza_esclavo.png)  
