@@ -17,7 +17,7 @@ Disponibilidad = 99.6625% x 99.9% x 99.9999999% x 99.9992% x 99.6625% x 99.9999%
 ### Ejercicio 2.2
 **Buscar frameworks y librerías para diferentes lenguajes que permitan hacer aplicaciones altamente disponibles con relativa facilidad.  
 Como ejemplo, examina PM2 (https://github.com/Unitech/pm2) que sirve para administrar clústeres de NodeJS.**  
-He encontrado los siguientes:  
+He encontrado los siguientes:
 * ***Akka:*** conjunto de bibliotecas de código abierto para diseñar sistemas flexibles y escalables que abarcan núcleos y redes de procesadores.
 * ***Play! Framework:*** Framework para aplicaciones web con Java.
 * ***Ultra Monkey:*** Gran disponibilidad para servicios en red. Es un balanceador de carga.
