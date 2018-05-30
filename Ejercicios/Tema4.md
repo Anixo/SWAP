@@ -9,7 +9,7 @@ Su precio comparado con cualquier servidor de una granja web es muy elevado, ya 
 **Buscar información sobre precio y características de balanceadores hardware específicos. Compara las prestaciones que ofrecen unos y otros.**  
 Algunos balanceadores hardware que he encontrado son:  
 * *A10 networks, Serie AX, modelo AX 2500*: dispone de 8 puerto GbE.
-* *Empresa LoadBalancer, modelo Enterprise 10G*: precio 6395€, dispone de 2x1GbE + 2x10GbE, 16GB de RAM, procesador Quad Core Intel Xeon
+* *Empresa LoadBalancer, modelo Enterprise 10G*: precio 6395€, dispone de 2x1GbE + 2x10GbE, 16GB de RAM, procesador Quad Core Intel Xeon.
 
 
 ### Ejercicio 4.3
