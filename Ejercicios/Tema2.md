@@ -18,7 +18,6 @@ Disponibilidad = 99.6625% x 99.9% x 99.9999999% x 99.9992% x 99.6625% x 99.9999%
 **Buscar frameworks y librerías para diferentes lenguajes que permitan hacer aplicaciones altamente disponibles con relativa facilidad.  
 Como ejemplo, examina PM2 (https://github.com/Unitech/pm2) que sirve para administrar clústeres de NodeJS.**  
 He encontrado los siguientes:  
-* Junos OS
 * ***Akka:*** conjunto de bibliotecas de código abierto para diseñar sistemas flexibles y escalables que abarcan núcleos y redes de procesadores.
 * ***Play! Framework:*** Framework para aplicaciones web con Java.
 * ***Ultra Monkey:*** Gran disponibilidad para servicios en red. Es un balanceador de carga.
@@ -39,5 +38,6 @@ Ejemplos de balanceadores software y hardware:
 * [Software de Barracuda](https://www.barracuda.com/products/loadbalancer)
 * [Software de Amazon](https://aws.amazon.com/es/elasticloadbalancing/details/)
 * [Balanceador hardware de Kemp](https://kemptechnologies.com/es/server-load-balancing-appliances/product-matrix.html)
+
 Ejemplos productos de almacenamiento:
 * [Productos HP para almacenamiento](https://www.it-market.com/en/hewlett-packard/hp-storage/hp-storage-accessories?cat=452&next_page=2)

@@ -2,7 +2,7 @@
 
 ### Ejercicio 5.1
 **Buscar información sobre cómo calcular el número de conexiones por segundo.
-Para empezar, podéis revisar las siguientes webs: http://bit.ly/1ye4yHz http://bit.ly/1PkZbLJ **  
+Para empezar, podéis revisar las siguientes webs: http://bit.ly/1ye4yHz http://bit.ly/1PkZbLJ**  
 Una fórmula aproximada es la siguiente (fuente en http://priocept.com/2009/08/21/calculating-http-server-load/):  
 Tomaremos algunos datos de ejemplo:  
 * 20000 usuarios por hora.
@@ -23,6 +23,6 @@ Hemos instalado Wireshark y capturado paquetes HTTP:
 **Buscar información sobre características, disponibilidad para diversos SO, etc de herramientas para monitorizar las prestaciones de un servidor.  
 Para empezar, podemos comenzar utilizando las clásicas de Linux: top, vmstat, netstat.**  
 Aparte de los comandos ya menciones, también tenemos *tcpdump*. Si buscamos algún software, he encontrado varios como:  
-* (OpenNMS)[https://opennms.org/en]
-* (SolarWinds)[https://www.solarwinds.com/free-tools/server-health-monitor]
-* (Spiceworks)[https://community.spiceworks.com/products/114-spiceworks]
+* [OpenNMS](https://opennms.org/en)
+* [SolarWinds](https://www.solarwinds.com/free-tools/server-health-monitor)
+* [Spiceworks](https://community.spiceworks.com/products/114-spiceworks)
